@@ -1,0 +1,18 @@
+# Groundwork comments on every new ticket with the files, people and risks that similar past fixes point to.
+# This demo learns from the history of honojs/hono, so the tickets here are written as hono tickets.
+name: Groundwork
+on:
+  issues:
+    types: [opened]
+permissions:
+  issues: write
+  contents: read
+jobs:
+  groundwork:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Farouk1901/groundwork@main
+        with:
+          history: honojs/hono
+          prs: '800'
+          issues: '1200'
